@@ -149,7 +149,7 @@ body {
         top: 0;
         left: -100%;
         height: 100vh;
-        width: 100vw;
+        width: 100%; /* Changed from 100vw to 100% for full width */
         background: rgba(0, 50, 0, 0.98);
         backdrop-filter: blur(15px);
         padding: 80px 2rem 2rem;
@@ -1263,3 +1263,4 @@ html, body {
         padding: 1rem;
     }
 }
+
