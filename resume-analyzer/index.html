@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>मार्गदर्शिनी - Resume Evaluator</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- PDF.js for PDF parsing -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.14.305/pdf.min.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="../index.html" class="navbar-logo">मार्गदर्शिनी</a>
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="navbar-menu">
+      <li><a href="../index.html" class="nav-link">Home</a></li> 
+      <li><a href="../index.html#services" class="nav-link">Services</a></li>
+      <li><a href="../index.html#contact" class="nav-link">Contact</a></li>
+    </ul> 
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main>
+  <h1 class="page-title">Resume Analyzer</h1>
+  <p class="page-description">Upload your resume and select your desired role to get a detailed analysis of your resume's strengths and areas for improvement.</p>
+
+  <!-- File Upload -->
+  <div class="upload-section">
+    <label for="resumeUpload" class="upload-label">
+      <div class="upload-icon">📄</div>
+      Upload Resume (PDF/TXT)
+    </label>
+    <input type="file" id="resumeUpload" class="upload-input" accept=".pdf,.txt" />
+    <div class="file-name" id="fileName"></div>
+  </div>
+
+  <!-- Role Selection -->
+  <div class="role-section">
+    <label for="roleSelect" class="role-label">Select Your Role / Field:</label>
+    <select id="roleSelect" class="role-select">
+      <option value="Web">💻 Web</option>
+      <option value="Data">📊 Data</option>
+      <option value="AI">🤖 AI</option>
+      <option value="Software">🖥 Software</option>
+      <option value="Engineering">🛠 Engineering</option>
+      <option value="Biotech">🧬 Biotech</option>
+      <option value="Arts">🎨 Arts</option>
+      <option value="Management">📈 Management</option>
+      <option value="Design">✏️ Design</option>
+      <option value="Humanities">📚 Humanities</option>
+    </select>
+  </div>
+
+  <!-- Evaluate Button -->
+  <button id="evaluateBtn" class="btn btn-primary">Evaluate Resume</button>
+
+  <!-- Loading Overlay -->
+  <div id="loading" class="loading">
+    <div class="loader"></div>
+    <p id="loadingMessage" class="loading-message">Analyzing Sections...</p>
+  </div>
+
+  <!-- Output -->
+  <div id="output" class="output">
+    <!-- Score -->
+    <div class="score-container">
+      <h3 class="score-title">Resume Score</h3>
+      <div class="score-bar">
+        <div id="scoreFill" class="score-fill"></div>
+      </div>
+      <p id="scoreValue" class="score-value">0%</p>
+    </div>
+
+    <!-- Grid Output -->
+    <div id="gridOutput" class="grid-container"></div>
+
+    <!-- Resume Preview -->
+    <div class="resume-preview">
+      <h3>Resume Preview</h3>
+      <div id="resumePreview" class="preview-content"></div>
+    </div>
+
+    <!-- Download Report -->
+    <button id="downloadReport" class="btn">📥 Download Report</button>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>मार्गदर्शिनी</h3>
+        <p>Your trusted career guidance platform helping you navigate your professional journey with confidence.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#blog">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 मार्गदर्शिनी. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

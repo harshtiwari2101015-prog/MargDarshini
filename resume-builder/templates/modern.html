@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Resume Template</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            min-height: 100vh;
+        }
+        
+        .sidebar {
+            background: #2e7d32;
+            color: white;
+            padding: 30px;
+        }
+        
+        .main-content {
+            padding: 30px;
+            background: #f8f9fa;
+        }
+        
+        .resume-name {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            color: #ffeb3b;
+            font-weight: bold;
+        }
+        
+        .resume-title {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #e0e0e0;
+        }
+        
+        .contact-info {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 1.3rem;
+            color: #ffeb3b;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #ffeb3b;
+            font-weight: bold;
+        }
+        
+        .main-section-title {
+            font-size: 1.4rem;
+            color: #2e7d32;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #2e7d32;
+            font-weight: bold;
+        }
+        
+        .experience-item, .education-item {
+            margin-bottom: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .item-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #2e7d32;
+        }
+        
+        .item-date {
+            color: #666;
+            font-style: italic;
+        }
+        
+        .item-subtitle {
+            color: #555;
+            margin-bottom: 8px;
+            font-size: 1rem;
+        }
+        
+        .skills-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        
+        .skill-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 8px 15px;
+            border-radius: 20px;
+            color: white;
+        }
+        
+        .summary {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        
+        @media print {
+            body {
+                display: grid;
+                grid-template-columns: 1fr 2fr;
+            }
+            
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h1 class="resume-name">{{fullName}}</h1>
+        <div class="resume-title">{{professionalTitle}}</div>
+        
+        <div class="section">
+            <h2 class="section-title">Contact</h2>
+            <div class="contact-info">
+                {{#email}}<div class="contact-item"><i class="fas fa-envelope"></i> {{email}}</div>{{/email}}
+                {{#phone}}<div class="contact-item"><i class="fas fa-phone"></i> {{phone}}</div>{{/phone}}
+                {{#location}}<div class="contact-item"><i class="fas fa-map-marker-alt"></i> {{location}}</div>{{/location}}
+                {{#linkedin}}<div class="contact-item"><i class="fab fa-linkedin"></i> {{linkedin}}</div>{{/linkedin}}
+                {{#github}}<div class="contact-item"><i class="fab fa-github"></i> {{github}}</div>{{/github}}
+            </div>
+        </div>
+
+        {{#skills.length}}
+        <div class="section">
+            <h2 class="section-title">Skills</h2>
+            <div class="skills-list">
+                {{#skills}}
+                <div class="skill-item">{{.}}</div>
+                {{/skills}}
+            </div>
+        </div>
+        {{/skills.length}}
+    </div>
+
+    <div class="main-content">
+        {{#summary}}
+        <div class="section">
+            <h2 class="main-section-title">Summary</h2>
+            <div class="summary">
+                <p>{{summary}}</p>
+            </div>
+        </div>
+        {{/summary}}
+
+        {{#experience.length}}
+        <div class="section">
+            <h2 class="main-section-title">Experience</h2>
+            {{#experience}}
+            <div class="experience-item">
+                <div class="item-header">
+                    <span class="item-title">{{title}}</span>
+                    <span class="item-date">{{startDate}} - {{endDate}}</span>
+                </div>
+                <div class="item-subtitle">{{company}}</div>
+                <p>{{description}}</p>
+            </div>
+            {{/experience}}
+        </div>
+        {{/experience.length}}
+
+        {{#education.length}}
+        <div class="section">
+            <h2 class="main-section-title">Education</h2>
+            {{#education}}
+            <div class="education-item">
+                <div class="item-header">
+                    <span class="item-title">{{degree}}</span>
+                    <span class="item-date">{{year}}</span>
+                </div>
+                <div class="item-subtitle">{{institution}}</div>
+                {{#grade}}<p>Grade: {{grade}}</p>{{/grade}}
+            </div>
+            {{/education}}
+        </div>
+        {{/education.length}}
+    </div>
+</body>
+</html>

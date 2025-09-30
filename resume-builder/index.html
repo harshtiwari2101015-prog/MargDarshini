@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मार्गदर्शिनी - Resume Builder</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="../index.html" class="navbar-logo">मार्गदर्शिनी</a>
+    <button class="navbar-toggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="navbar-menu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="../index.html#contact">Contact</a></li>
+      <li><a href="#">Resume Builder</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Resume Builder Container -->
+<section class="resume-builder-container">
+  <div class="container">
+    <div class="resume-header">
+      <h1><i class="fas fa-file-alt"></i> Resume Builder</h1>
+      <p>Create professional resumes in minutes. Choose a template and start building!</p>
+    </div>
+
+    <div class="resume-editor">
+      <!-- Template Selection -->
+      <div class="template-section">
+        <h2>Choose a Template</h2>
+        <div class="template-grid">
+          <div class="template-card active" data-template="basic">
+            <div class="template-preview">
+              <div class="preview-header"></div>
+              <div class="preview-content">
+                <div class="preview-line short"></div>
+                <div class="preview-line medium"></div>
+                <div class="preview-line long"></div>
+              </div>
+            </div>
+            <h3>Basic</h3>
+            <p>Clean and professional</p>
+          </div>
+          <div class="template-card" data-template="modern">
+            <div class="template-preview modern">
+              <div class="preview-sidebar"></div>
+              <div class="preview-main">
+                <div class="preview-line short"></div>
+                <div class="preview-line medium"></div>
+              </div>
+            </div>
+            <h3>Modern</h3>
+            <p>Two-column layout</p>
+          </div>
+          <div class="template-card" data-template="professional">
+            <div class="template-preview professional">
+              <div class="preview-header large"></div>
+              <div class="preview-content">
+                <div class="preview-line long"></div>
+                <div class="preview-line short"></div>
+              </div>
+            </div>
+            <h3>Professional</h3>
+            <p>Executive style</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Editor and Preview -->
+      <div class="editor-preview-grid">
+        <!-- Editor Panel -->
+        <div class="editor-panel">
+          <div class="editor-tabs">
+            <button class="tab-btn active" data-tab="personal">Personal</button>
+            <button class="tab-btn" data-tab="experience">Experience</button>
+            <button class="tab-btn" data-tab="education">Education</button>
+            <button class="tab-btn" data-tab="skills">Skills</button>
+          </div>
+
+          <div class="tab-content active" id="personal-tab">
+            <form class="resume-form">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" placeholder="Enter your full name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="your.email@example.com">
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="+91 1234567890">
+              </div>
+              <div class="form-group">
+                <label for="location">Location</label>
+                <input type="text" id="location" placeholder="City, State">
+              </div>
+              <div class="form-group">
+                <label for="linkedin">LinkedIn (Optional)</label>
+                <input type="url" id="linkedin" placeholder="https://linkedin.com/in/yourname">
+              </div>
+              <div class="form-group">
+                <label for="github">GitHub (Optional)</label>
+                <input type="url" id="github" placeholder="https://github.com/yourname">
+              </div>
+              <div class="form-group">
+                <label for="summary">Professional Summary</label>
+                <textarea id="summary" rows="4" placeholder="Brief overview of your professional background..."></textarea>
+              </div>
+            </form>
+          </div>
+
+          <div class="tab-content" id="experience-tab">
+            <div class="section-header">
+              <h3>Work Experience</h3>
+              <button class="add-btn" id="addExperience">
+                <i class="fas fa-plus"></i> Add Experience
+              </button>
+            </div>
+            <div class="experience-list" id="experienceList">
+              <!-- Experience items will be added here -->
+            </div>
+          </div>
+
+          <div class="tab-content" id="education-tab">
+            <div class="section-header">
+              <h3>Education</h3>
+              <button class="add-btn" id="addEducation">
+                <i class="fas fa-plus"></i> Add Education
+              </button>
+            </div>
+            <div class="education-list" id="educationList">
+              <!-- Education items will be added here -->
+            </div>
+          </div>
+
+          <div class="tab-content" id="skills-tab">
+            <div class="form-group">
+              <label for="skillsInput">Skills (comma separated)</label>
+              <input type="text" id="skillsInput" placeholder="HTML, CSS, JavaScript, React...">
+              <div class="skills-tags" id="skillsTags"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Preview Panel -->
+        <div class="preview-panel">
+          <div class="preview-header">
+            <h3>Live Preview</h3>
+          </div>
+          <div class="resume-preview" id="resumePreview">
+            <!-- Resume preview will be rendered here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="preview-actions">
+      <button class="preview-btn" id="downloadPdf">
+        <i class="fas fa-download"></i> Download PDF
+      </button>
+      <button class="preview-btn secondary" id="printResume">
+        <i class="fas fa-print"></i> Print
+      </button>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>मार्गदर्शिनी</h3>
+        <p>Your trusted career guidance platform helping you navigate your professional journey with confidence.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#blog">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 मार्गदर्शिनी. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

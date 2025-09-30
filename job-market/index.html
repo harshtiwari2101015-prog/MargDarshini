@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>मार्गदर्शिनी - Job Market Analysis</title>
+<meta name="description" content="Stay updated with the latest hiring trends, internship opportunities, and career insights from the tech industry.">
+<meta name="author" content="Margadarshini Team">
+<meta name="keywords" content="job news, career opportunities, internships, hiring trends, tech jobs, AI jobs, remote work, government jobs">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="मार्गदर्शिनी - Latest Job News & Career Opportunities">
+<meta property="og:description" content="Your guide to the latest job opportunities, career insights, and hiring trends across industries.">
+<meta property="og:image" content="/bg.jpg">
+<meta property="og:site_name" content="Margadarshini">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="मार्गदर्शिनी - Latest Job News & Career Opportunities">
+<meta name="twitter:description" content="Your guide to the latest job opportunities, career insights, and hiring trends across industries.">
+<meta name="twitter:image" content="/bg.jpg">
+
+<!-- Canonical URL -->
+<link rel="canonical" href="https://margadarshini.lovable.app">
+
+<!-- Font Awesome for icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "NewsMediaOrganization",
+    "name": "मार्गदर्शिनी",
+    "alternateName": "Margadarshini",
+    "url": "https://margadarshini.lovable.app",
+    "description": "Latest job news and career opportunities portal",
+    "logo": "/bg.jpg",
+    "sameAs": [],
+    "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN"
+    }
+}
+</script>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Header Section -->
+<header class="header">
+    <div class="container">
+        <div class="logo">
+            <h1>मार्गदर्शिनी</h1>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <nav class="nav" id="mainNav">
+            <ul>
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="#jobs" class="nav-link">Jobs</a></li>
+                <li><a href="#internships" class="nav-link">Internships</a></li>
+                <li><a href="#career-tips" class="nav-link">Career Tips</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero-content">
+            <h2>Latest Job News & Career Opportunities</h2>
+            <p>Stay updated with the latest hiring trends, internship opportunities, and career insights from the tech industry.</p>
+            <div class="search-bar">
+                <input type="text" placeholder="Search jobs, companies, or keywords" id="searchInput">
+                <button type="button" id="searchBtn">Search</button>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" id="jobCount">500+</span>
+                    <span class="stat-label">Active Jobs</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="companyCount">150+</span>
+                    <span class="stat-label">Hiring Companies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="successCount">10K+</span>
+                    <span class="stat-label">Success Stories</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Jobs Section -->
+<section class="featured-jobs" id="jobs">
+    <div class="container">
+        <div class="section-header">
+            <h2>Featured Jobs</h2>
+            <div class="filter-tabs">
+                <button class="filter-tab active" data-filter="all">All</button>
+                <button class="filter-tab" data-filter="full-time">Full-time</button>
+                <button class="filter-tab" data-filter="part-time">Part-time</button>
+                <button class="filter-tab" data-filter="remote">Remote</button>
+            </div>
+        </div>
+        <div class="jobs-grid">
+            <div class="job-card" data-type="full-time remote">
+                <div class="job-header">
+                    <h3>Frontend Developer</h3>
+                    <span class="job-type">Full-time</span>
+                </div>
+                <div class="company-info">
+                    <span class="company-name">Tech Solutions Inc.</span>
+                    <span class="location">Remote</span>
+                </div>
+                <p class="job-description">We're looking for a skilled Frontend Developer with experience in React, JavaScript, and modern web technologies.</p>
+                <div class="skills">
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">CSS</span>
+                </div>
+                <div class="job-footer">
+                    <span class="salary">₹6-10 LPA</span>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+            
+            <div class="job-card" data-type="full-time">
+                <div class="job-header">
+                    <h3>Data Scientist</h3>
+                    <span class="job-type">Full-time</span>
+                </div>
+                <div class="company-info">
+                    <span class="company-name">Analytics Pro</span>
+                    <span class="location">Bangalore</span>
+                </div>
+                <p class="job-description">Join our data team to build predictive models and derive insights from large datasets.</p>
+                <div class="skills">
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">SQL</span>
+                </div>
+                <div class="job-footer">
+                    <span class="salary">₹8-12 LPA</span>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+            
+            <div class="job-card" data-type="part-time">
+                <div class="job-header">
+                    <h3>UX Designer</h3>
+                    <span class="job-type">Contract</span>
+                </div>
+                <div class="company-info">
+                    <span class="company-name">Design Studio</span>
+                    <span class="location">Mumbai</span>
+                </div>
+                <p class="job-description">Create beautiful and functional user experiences for our digital products.</p>
+                <div class="skills">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">UI/UX</span>
+                    <span class="skill-tag">Wireframing</span>
+                </div>
+                <div class="job-footer">
+                    <span class="salary">₹5-8 LPA</span>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+        </div>
+        <div class="view-all">
+            <a href="#all-jobs" class="btn">View All Jobs</a>
+        </div>
+    </div>
+</section>
+
+<!-- Internships Section -->
+<section class="internships" id="internships">
+    <div class="container">
+        <h2>Internship Opportunities</h2>
+        <div class="internships-grid">
+            <div class="internship-card">
+                <div class="internship-badge">Popular</div>
+                <h3>Software Development Intern</h3>
+                <div class="company-info">
+                    <span class="company-name">Startup XYZ</span>
+                    <span class="duration">3 months</span>
+                </div>
+                <p>Gain hands-on experience in full-stack development with mentorship from senior engineers.</p>
+                <div class="skills">
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+                <div class="internship-footer">
+                    <span class="stipend">₹15,000/month</span>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+            
+            <div class="internship-card">
+                <h3>Marketing Intern</h3>
+                <div class="company-info">
+                    <span class="company-name">Digital Agency</span>
+                    <span class="duration">6 months</span>
+                </div>
+                <p>Learn digital marketing strategies and campaign management in a fast-paced environment.</p>
+                <div class="skills">
+                    <span class="skill-tag">SEO</span>
+                    <span class="skill-tag">Social Media</span>
+                    <span class="skill-tag">Content Writing</span>
+                </div>
+                <div class="internship-footer">
+                    <span class="stipend">₹12,000/month</span>
+                    <button class="apply-btn">Apply Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Career Tips Section -->
+<section class="career-tips" id="career-tips">
+    <div class="container">
+        <h2>Career Insights & Tips</h2>
+        <div class="tips-grid">
+            <article class="tip-card">
+                <div class="tip-image">
+                    <img src="images/tech-int.png" alt="Technical Interview Preparation" class="tip-img">
+                </div>
+                <h3>How to Prepare for Technical Interviews</h3>
+                <p>Master the art of technical interviews with these proven strategies and practice techniques.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+            
+            <article class="tip-card">
+                <div class="tip-image">
+                    <img src="images/remote-work.png" alt="Remote Work Best Practices" class="tip-img">
+                </div>
+                <h3>Remote Work Best Practices</h3>
+                <p>Maximize your productivity and maintain work-life balance while working remotely.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+            
+            <article class="tip-card">
+                <div class="tip-image">
+                    <img src="images/strong-profile.png" alt="Building a Strong LinkedIn Profile" class="tip-img">
+                </div>
+                <h3>Building a Strong LinkedIn Profile</h3>
+                <p>Optimize your LinkedIn profile to attract recruiters and showcase your professional brand.</p>
+                <a href="#" class="read-more">Read More</a>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="newsletter">
+    <div class="container">
+        <div class="newsletter-content">
+            <h2>Stay Updated</h2>
+            <p>Subscribe to our newsletter for the latest job openings and career advice.</p>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer" id="contact">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>मार्गदर्शिनी</h3>
+                <p>Your guide to job opportunities and career growth.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#jobs">Jobs</a></li>
+                    <li><a href="#internships">Internships</a></li>
+                    <li><a href="#career-tips">Career Tips</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p>Email: info@margadarshini.com</p>
+                <p>Phone: +91 98765 43210</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 मार्गदर्शिनी. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 20L12 4M12 4L5 11M12 4L19 11" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>

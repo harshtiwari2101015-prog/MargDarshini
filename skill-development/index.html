@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>मार्गदर्शिनी - Skill Development</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+<!-- Navbar -->
+<nav class="navbar">
+  <div class="navbar-container">
+    <a href="../index.html" class="navbar-logo">मार्गदर्शिनी</a>
+    <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+    <ul class="navbar-menu" id="navbarMenu">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="#skill-development">Skill Development</a></li>
+      <li><a href="#learning-resources">Learning Resources</a></li>
+    </ul>
+  </div>
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+</nav>
+
+<!-- Skill Development Section -->
+<section id="skill-development" class="section">
+  <div class="container">
+    <h2>Skill Development</h2>
+    <p class="section-subtitle">Enhance your employability with personalized skill recommendations and learning paths</p>
+    
+    <div class="skill-development-container">
+      <!-- Skill Assessment -->
+      <div class="skill-assessment">
+        <h3><i class="fas fa-clipboard-check"></i> Skill Assessment</h3>
+        <p>Take our quick assessment to identify skill gaps and receive personalized recommendations.</p>
+        <button class="assessment-btn" id="startAssessment">
+          Start Skill Assessment <i class="fas fa-play"></i>
+        </button>
+      </div>
+
+      <!-- Assessment Modal -->
+      <div class="modal" id="assessmentModal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <h3>Skill Assessment</h3>
+          <div class="assessment-progress">
+            <div class="progress-bar">
+              <div class="progress" id="assessmentProgress"></div>
+            </div>
+            <span id="progressText">Question 1 of 5</span>
+          </div>
+          
+          <div class="assessment-questions">
+            <!-- Questions will be populated by JavaScript -->
+          </div>
+          
+          <div class="assessment-nav">
+            <button class="nav-btn" id="prevQuestion" disabled>Previous</button>
+            <button class="nav-btn" id="nextQuestion">Next</button>
+            <button class="nav-btn" id="submitAssessment" style="display: none;">Get Recommendations</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Skill Recommendations -->
+      <div class="skill-recommendations" id="skillRecommendations" style="display: none;">
+        <h3>Your Personalized Skill Development Plan</h3>
+        <div class="recommendations-grid" id="recommendationsGrid">
+          <!-- Recommendations will be populated by JavaScript -->
+        </div>
+      </div>
+
+      <!-- Learning Resources Section - Updated with real files -->
+      <div class="learning-resources" id="learning-resources">
+        <h3><i class="fas fa-book-open"></i> Learning Resources</h3>
+        <div class="resource-filters">
+          <button class="filter-btn active" data-category="all">All</button>
+          <button class="filter-btn" data-category="technical">Technical</button>
+          <button class="filter-btn" data-category="soft-skills">Soft Skills</button>
+          <button class="filter-btn" data-category="certifications">Certifications</button>
+        </div>
+        
+        <div class="resources-grid">
+          <!-- Programming Fundamentals -->
+          <div class="resource-card" data-category="technical">
+            <div class="resource-icon">
+              <i class="fas fa-laptop-code"></i>
+            </div>
+            <h4>Programming Fundamentals</h4>
+            <p>Learn the basics of programming with Python, JavaScript, or Java.</p>
+            <div class="resource-meta">
+              <span class="level">Beginner</span>
+              <span class="duration">4-6 weeks</span>
+            </div>
+            <div class="resource-links">
+              <a href="resources/programming-fundamentals.pdf" class="resource-link" data-file="programming-fundamentals.pdf" data-type="pdf">Study Guide</a>
+              <a href="resources/python-exercises.pdf" class="resource-link" data-file="python-exercises.zip" data-type="exercise">Practice Exercises</a>
+            </div>
+          </div>
+          
+          <!-- Effective Communication -->
+          <div class="resource-card" data-category="soft-skills">
+            <div class="resource-icon">
+              <i class="fas fa-comments"></i>
+            </div>
+            <h4>Effective Communication</h4>
+            <p>Improve your verbal and written communication skills for the workplace.</p>
+            <div class="resource-meta">
+              <span class="level">All Levels</span>
+              <span class="duration">Self-paced</span>
+            </div>
+            <div class="resource-links">
+              <a href="resources/communication-guide.pdf" class="resource-link" data-file="communication-guide.pdf" data-type="pdf">Guide Book</a>
+              <a href="resources/communication-scenarios.pdf" class="resource-link" data-file="communication-scenarios.pdf" data-type="exercise">Practice Scenarios</a>
+            </div>
+          </div>
+          
+          <!-- Data Analysis -->
+          <div class="resource-card" data-category="technical">
+            <div class="resource-icon">
+              <i class="fas fa-chart-bar"></i>
+            </div>
+            <h4>Data Analysis</h4>
+            <p>Master data analysis techniques using Excel, SQL, and visualization tools.</p>
+            <div class="resource-meta">
+              <span class="level">Intermediate</span>
+              <span class="duration">8-10 weeks</span>
+            </div>
+            <div class="resource-links">
+              <a href="resources/data-analysis-tutorial.pdf" class="resource-link" data-file="data-analysis-tutorial.pdf" data-type="pdf">Tutorial</a>
+              <a href="resources/datasets.pdf" class="resource-link" data-file="datasets.zip" data-type="exercise">Sample Datasets</a>
+            </div>
+          </div>
+          
+          <!-- Project Management -->
+          <div class="resource-card" data-category="certifications">
+            <div class="resource-icon">
+              <i class="fas fa-award"></i>
+            </div>
+            <h4>Project Management</h4>
+            <p>Prepare for PMP certification with comprehensive study materials.</p>
+            <div class="resource-meta">
+              <span class="level">Advanced</span>
+              <span class="duration">12-16 weeks</span>
+            </div>
+            <div class="resource-links">
+              <a href="resources/pmp-study-guide.pdf" class="resource-link" data-file="pmp-study-guide.pdf" data-type="pdf">Study Guide</a>
+              <a href="resources/project-management-template.pdf" class="resource-link" data-file="project-management-template.zip" data-type="exercise">Templates</a>
+            </div>
+          </div>
+          
+          <!-- Team Collaboration -->
+          <div class="resource-card" data-category="soft-skills">
+            <div class="resource-icon">
+              <i class="fas fa-users"></i>
+            </div>
+            <h4>Team Collaboration</h4>
+            <p>Learn strategies for effective teamwork and conflict resolution.</p>
+            <div class="resource-meta">
+              <span class="level">All Levels</span>
+              <span class="duration">2-3 weeks</span>
+            </div>
+            <div class="resource-links">
+              <a href="resources/team-collaboration.pdf" class="resource-link" data-file="team-collaboration.pdf" data-type="pdf">Handbook</a>
+              <a href="resources/team-exercises.pdf" class="resource-link" data-file="team-exercises.zip" data-type="exercise">Group Exercises</a>
+            </div>
+          </div>
+          
+          <!-- Cybersecurity Basics -->
+          <div class="resource-card" data-category="technical">
+            <div class="resource-icon">
+              <i class="fas fa-shield-alt"></i>
+            </div>
+            <h4>Cybersecurity Basics</h4>
+            <p>Understand fundamental cybersecurity principles and best practices.</p>
+            <div class="resource-meta">
+              <span class="level">Beginner</span>
+              <span class="duration">3-4 weeks</span>
+            </div>
+            <div class="resource-links">
+              <a href="resources/cybersecurity-basics.pdf" class="resource-link" data-file="cybersecurity-basics.pdf" data-type="pdf">Guide</a>
+              <a href="resources/security-checklist.pdf" class="resource-link" data-file="security-checklist.pdf" data-type="checklist">Checklist</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>मार्गदर्शिनी</h3>
+        <p>Your trusted career guidance platform helping you navigate your professional journey with confidence.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#services">Services</a></li>
+          <li><a href="../index.html#blog">Blog</a></li>
+          <li><a href="../index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 मार्गदर्शिनी. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

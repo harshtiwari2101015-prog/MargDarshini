@@ -1,0 +1,141 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 2000 >>
+stream
+BT
+/F1 24 Tf
+50 750 Td
+(Data Analysis Practice Datasets) Tj
+0 -40 Td
+/F1 18 Tf
+(Sample Data for Analysis) Tj
+0 -40 Td
+/F1 16 Tf
+(Sales Data) Tj
+0 -25 Td
+/F1 12 Tf
+(Month, Product, Region, Sales, Expenses) Tj
+0 -15 Td
+(January, Product_A, North, 50000, 20000) Tj
+0 -15 Td
+(January, Product_B, North, 45000, 18000) Tj
+0 -15 Td
+(January, Product_A, South, 55000, 22000) Tj
+0 -15 Td
+(January, Product_B, South, 48000, 19000) Tj
+0 -15 Td
+(February, Product_A, North, 52000, 21000) Tj
+0 -15 Td
+(February, Product_B, North, 46000, 18500) Tj
+0 -15 Td
+(February, Product_A, South, 58000, 23000) Tj
+0 -15 Td
+(February, Product_B, South, 50000, 20000) Tj
+0 -15 Td
+(March, Product_A, North, 51000, 20500) Tj
+0 -15 Td
+(March, Product_B, North, 47000, 18800) Tj
+0 -15 Td
+(March, Product_A, South, 56000, 22500) Tj
+0 -15 Td
+(March, Product_B, South, 49000, 19500) Tj
+0 -30 Td
+/F1 16 Tf
+(Customer Data) Tj
+0 -25 Td
+/F1 12 Tf
+(CustomerID, Age, Gender, Income, SpendingScore) Tj
+0 -15 Td
+(C001, 35, Male, 50000, 85) Tj
+0 -15 Td
+(C002, 28, Female, 45000, 75) Tj
+0 -15 Td
+(C003, 42, Male, 75000, 90) Tj
+0 -15 Td
+(C004, 31, Female, 55000, 60) Tj
+0 -15 Td
+(C005, 29, Male, 48000, 70) Tj
+0 -15 Td
+(C006, 45, Female, 82000, 95) Tj
+0 -15 Td
+(C007, 33, Male, 52000, 65) Tj
+0 -15 Td
+(C008, 39, Female, 68000, 80) Tj
+0 -15 Td
+(C009, 27, Male, 42000, 55) Tj
+0 -15 Td
+(C010, 36, Female, 58000, 75) Tj
+0 -30 Td
+/F1 16 Tf
+(Analysis Template Code) Tj
+0 -25 Td
+/F1 12 Tf
+(import pandas as pd) Tj
+0 -15 Td
+(import matplotlib.pyplot as plt) Tj
+0 -15 Td
+(import seaborn as sns) Tj
+0 -15 Td
+(# Load data) Tj
+0 -15 Td
+(def load_data(file_path):) Tj
+0 -15 Td
+(    return pd.read_csv(file_path)) Tj
+0 -15 Td
+(# Basic statistics) Tj
+0 -15 Td
+(def basic_stats(df):) Tj
+0 -15 Td
+(    print("Dataset Shape:", df.shape)) Tj
+0 -15 Td
+(    print("Basic Statistics:")) Tj
+0 -15 Td
+(    print(df.describe())) Tj
+0 -15 Td
+(    print("Missing Values:")) Tj
+0 -15 Td
+(    print(df.isnull().sum())) Tj
+0 -15 Td
+(# Create visualizations) Tj
+0 -15 Td
+(def create_visualizations(df):) Tj
+0 -15 Td
+(    # Sales trend) Tj
+0 -15 Td
+(    plt.figure(figsize=(10, 6))) Tj
+0 -15 Td
+(    df.groupby('Month')['Sales'].sum().plot(kind='line')) Tj
+0 -15 Td
+(    plt.title('Monthly Sales Trend')) Tj
+0 -15 Td
+(    plt.ylabel('Total Sales')) Tj
+0 -15 Td
+(    plt.show()) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000275 00000 n 
+0000000484 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+625
+%%EOF

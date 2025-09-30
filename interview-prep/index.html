@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>मार्गदर्शिनी - Interview Preparation</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="../index.html" class="navbar-logo">मार्गदर्शिनी</a>
+                <button class="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html" class="active">Interview Preparation</a></li>
+                    <li><a href="mock.html">Mock Interview</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="star-method.html">STAR Method</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h1>AI Interview Preparation Platform</h1>
+                <p class="subtitle">Master your interview skills with AI-powered practice sessions, personalized feedback, and comprehensive resources designed to help you succeed.</p>
+                
+                <div class="interview-container">
+                    <div class="mode-selector">
+                        <button class="mode-btn active" data-mode="hr">HR Round</button>
+                        <button class="mode-btn" data-mode="technical">Technical Round</button>
+                        <button class="mode-btn" data-mode="behavioral">Behavioral Round</button>
+                    </div>
+                    
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress" id="progress"></div>
+                        </div>
+                        <div class="progress-text">Progress: <span id="progress-text">0%</span></div>
+                    </div>
+                    
+                    <div class="interview-area">
+                        <div class="interview-header">
+                            <div class="round-title" id="round-title">HR Round</div>
+                            <div class="timer" id="timer">00:00</div>
+                        </div>
+                        
+                        <div class="question-area">
+                            <div class="question-text" id="question-text">Click "Start Recording" to begin the interview simulation.</div>
+                        </div>
+                        
+                        <div class="response-area">
+                            <div class="speech-controls">
+                                <button class="record-btn" id="record-btn">
+                                    <i class="fas fa-microphone"></i> Start Recording
+                                </button>
+                                <div class="recording-status" id="recording-status">Ready to record</div>
+                            </div>
+                            
+                            <div class="transcript-display">
+                                <div class="transcript-text" id="transcript-text">Your response will appear here...</div>
+                            </div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn next-btn" id="next-btn">Next Question</button>
+                                <button class="btn feedback-btn" id="feedback-btn">Get AI Feedback</button>
+                            </div>
+                        </div>
+                        
+                        <div class="feedback-area" id="feedback-area">
+                            <div class="feedback-title">AI Performance Analysis</div>
+                            <div class="feedback-criteria">
+                                <div class="criterion">
+                                    <div class="criterion-name">Clarity</div>
+                                    <div class="criterion-score" id="clarity-score">-</div>
+                                </div>
+                                <div class="criterion">
+                                    <div class="criterion-name">Confidence</div>
+                                    <div class="criterion-score" id="confidence-score">-</div>
+                                </div>
+                                <div class="criterion">
+                                    <div class="criterion-name">Relevance</div>
+                                    <div class="criterion-score" id="relevance-score">-</div>
+                                </div>
+                            </div>
+                            <div class="feedback-text" id="feedback-text">
+                                AI feedback will appear here after you answer a question and request analysis.
+                            </div>
+                        </div>
+                        
+                        <div class="interview-complete" id="interview-complete">
+                            <div class="complete-title">🎉 Interview Round Complete!</div>
+                            <p>Excellent work! You've successfully completed all questions in this round.</p>
+                            <p>Review your feedback and consider practicing additional rounds to further improve your skills.</p>
+                            <button class="btn restart-btn" id="restart-btn">Start New Session</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>मार्गदर्शिनी</h3>
+                    <p>Your trusted career guidance platform helping you navigate your professional journey with confidence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Interview Preparation</a></li>
+                        <li><a href="mock.html">Mock Interview</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="star-method.html">STAR Method</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 मार्गदर्शिनी. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

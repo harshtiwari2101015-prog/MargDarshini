@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STAR Method - मार्गदर्शिनी</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+    <!-- Background Overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="navbar-container">
+                <a href="../index.html" class="navbar-logo">मार्गदर्शिनी</a>
+                <button class="navbar-toggle" aria-label="Toggle navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+                <ul class="navbar-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="index.html">Interview Preparation</a></li>
+                    <li><a href="mock.html">Mock Interview</a></li>
+                    <li><a href="resources.html">Resources</a></li>
+                    <li><a href="star-method.html" class="active">STAR Method</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="section">
+                <h1>Master the STAR Method for Behavioral Interviews</h1>
+                <p class="subtitle">Learn how to structure compelling answers to behavioral interview questions</p>
+                
+                <div class="star-intro">
+                    <div class="star-explanation">
+                        <h2>What is the STAR Method?</h2>
+                        <p>The STAR method is a structured approach to answering behavioral interview questions. It helps you provide complete, concise, and compelling answers by breaking them down into four components:</p>
+                        
+                        <div class="star-components">
+                            <div class="star-component">
+                                <div class="star-letter">S</div>
+                                <div class="star-content">
+                                    <h3>Situation</h3>
+                                    <p>Describe the context or background of the situation (20% of your answer)</p>
+                                </div>
+                            </div>
+                            <div class="star-component">
+                                <div class="star-letter">T</div>
+                                <div class="star-content">
+                                    <h3>Task</h3>
+                                    <p>Explain your responsibility or the goal in that situation (10% of your answer)</p>
+                                </div>
+                            </div>
+                            <div class="star-component">
+                                <div class="star-letter">A</div>
+                                <div class="star-content">
+                                    <h3>Action</h3>
+                                    <p>Describe the specific actions you took to address the situation (60% of your answer)</p>
+                                </div>
+                            </div>
+                            <div class="star-component">
+                                <div class="star-letter">R</div>
+                                <div class="star-content">
+                                    <h3>Result</h3>
+                                    <p>Share the outcomes of your actions and what you learned (10% of your answer)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="star-example">
+                        <h2>STAR Method Example</h2>
+                        <div class="example-card">
+                            <h3>Question: "Tell me about a time when you demonstrated leadership."</h3>
+                            <div class="star-breakdown">
+                                <div class="breakdown-item">
+                                    <h4>Situation</h4>
+                                    <p>"When I was a junior in high school, there were several students in my math class who were struggling with some of the more difficult concepts."</p>
+                                </div>
+                                <div class="breakdown-item">
+                                    <h4>Task</h4>
+                                    <p>"With an upcoming national exam, I was asked by my math teacher to start an after school session to assist the other students."</p>
+                                </div>
+                                <div class="breakdown-item">
+                                    <h4>Action</h4>
+                                    <p>"I stayed after school twice a week to review class materials and homework. I created a comprehensive study guide. I demonstrated the best methods for solving difficult problems, explained strategies that worked for me, and developed new problems to help them practice."</p>
+                                </div>
+                                <div class="breakdown-item">
+                                    <h4>Result</h4>
+                                    <p>"Our class average for the national exam was the highest it had been in over ten years, and overall the students I helped were able to develop a better understanding and appreciation for math."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="star-practice">
+                    <h2>Practice with STAR Method</h2>
+                    <p>Select a behavioral question and practice structuring your answer using the STAR method:</p>
+                    
+                    <div class="practice-area">
+                        <div class="question-selector">
+                            <select id="practice-question">
+                                <option value="">Select a practice question...</option>
+                                <option value="leadership">Tell me about a time when you demonstrated leadership.</option>
+                                <option value="conflict">Tell me about a time you dealt with conflict at work.</option>
+                                <option value="mistake">Tell me about a time you made a mistake and how you handled it.</option>
+                                <option value="challenge">Describe a significant challenge you've faced and how you overcame it.</option>
+                                <option value="teamwork">Give an example of how you've worked on a team.</option>
+                                <option value="problem">Describe a time when you identified a problem and took action to resolve it.</option>
+                            </select>
+                        </div>
+                        
+                        <div class="star-worksheet">
+                            <div class="worksheet-section">
+                                <label for="situation">Situation (20%)</label>
+                                <textarea id="situation" placeholder="Describe the context or background..."></textarea>
+                            </div>
+                            <div class="worksheet-section">
+                                <label for="task">Task (10%)</label>
+                                <textarea id="task" placeholder="Explain your responsibility or goal..."></textarea>
+                            </div>
+                            <div class="worksheet-section">
+                                <label for="action">Action (60%)</label>
+                                <textarea id="action" placeholder="Describe the specific actions you took..."></textarea>
+                            </div>
+                            <div class="worksheet-section">
+                                <label for="result">Result (10%)</label>
+                                <textarea id="result" placeholder="Share the outcomes and what you learned..."></textarea>
+                            </div>
+                        </div>
+                        
+                        <div class="practice-actions">
+                            <button class="btn" id="save-response">Save Response</button>
+                            <button class="btn" id="clear-response">Clear</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="star-tips">
+                    <h2>Tips for Effective STAR Responses</h2>
+                    <div class="tips-grid">
+                        <div class="tip-card">
+                            <i class="fas fa-bullseye"></i>
+                            <h3>Be Specific</h3>
+                            <p>Provide concrete details rather than general statements</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-user"></i>
+                            <h3>Focus on Your Role</h3>
+                            <p>Use "I" statements rather than "we" to highlight your contributions</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-chart-line"></i>
+                            <h3>Quantify Results</h3>
+                            <p>Whenever possible, use numbers to demonstrate impact</p>
+                        </div>
+                        <div class="tip-card">
+                            <i class="fas fa-lightbulb"></i>
+                            <h3>Show Learning</h3>
+                            <p>Highlight what you learned from the experience</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>मार्गदर्शिनी</h3>
+                    <p>Your trusted career guidance platform helping you navigate your professional journey with confidence.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="index.html">Interview Preparation</a></li>
+                        <li><a href="mock.html">Mock Interview</a></li>
+                        <li><a href="resources.html">Resources</a></li>
+                        <li><a href="star-method.html">STAR Method</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 मार्गदर्शिनी. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="star.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

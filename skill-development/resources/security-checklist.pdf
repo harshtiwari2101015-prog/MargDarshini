@@ -1,0 +1,74 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+endobj
+4 0 obj
+<< /Length 600 >>
+stream
+BT
+/F1 20 Tf
+50 750 Td
+(Security Best Practices Checklist) Tj
+0 -40 Td
+/F1 14 Tf
+(Daily Security Habits) Tj
+0 -20 Td
+/F1 12 Tf
+(□ Lock computer when away from desk) Tj
+0 -15 Td
+(□ Use strong, unique passwords) Tj
+0 -15 Td
+(□ Enable two-factor authentication) Tj
+0 -15 Td
+(□ Verify email senders before clicking links) Tj
+0 -15 Td
+(□ Report suspicious activity immediately) Tj
+0 -30 Td
+/F1 14 Tf
+(Weekly Security Tasks) Tj
+0 -20 Td
+/F1 12 Tf
+(□ Update software and applications) Tj
+0 -15 Td
+(□ Review account access and permissions) Tj
+0 -15 Td
+(□ Backup important files) Tj
+0 -15 Td
+(□ Scan for malware and viruses) Tj
+0 -30 Td
+/F1 14 Tf
+(Monthly Security Review) Tj
+0 -20 Td
+/F1 12 Tf
+(□ Change important passwords) Tj
+0 -15 Td
+(□ Review security settings) Tj
+0 -15 Td
+(□ Check for system updates) Tj
+0 -15 Td
+(□ Security awareness training) Tj
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000275 00000 n 
+0000000484 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+625
+%%EOF

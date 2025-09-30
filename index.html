@@ -1,0 +1,301 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>मार्गदर्शिनी</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="navbar-logo">मार्गदर्शिनी</a>
+      <button class="navbar-toggle" aria-label="Toggle navigation">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+      <ul class="navbar-menu">
+        <li><a href="#" class="nav-link">Home</a></li> 
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#blog" class="nav-link">Blog</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul> 
+    </div>
+  </nav>
+
+  <!-- Hero Section with Form and About -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Find Your Perfect Career Path</h1>
+        <p>मार्गदर्शिनी (Mārgadarśinī) means "Guide" in Sanskrit. We are a career guidance platform dedicated to helping individuals discover their ideal career paths based on their education, skills, and interests.</p>
+      </div>
+      
+      <div class="form-container">
+        <form class="candidate-form" id="careerForm">
+          <!-- Q1 -->
+          <div class="form-step active">
+            <label for="education">What is your highest level of education completed?</label>
+            <select id="education" name="education" required>
+              <option value="">Select..</option>
+              <option value="10th">10th</option>
+              <option value="12th">12th</option>
+              <option value="Diploma">Diploma</option>
+              <option value="Undergraduate">Undergraduate</option>
+              <option value="Postgraduate">Postgraduate</option>
+              <option value="Other">Other</option>
+            </select>
+            <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+
+          <!-- Q2 -->
+          <div class="form-step">
+            <p>Which skills do you have?</p>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="skills" value="Programming"><i class="fa-solid fa-code"></i> Programming</label>
+              <label><input type="checkbox" name="skills" value="Communication"><i class="fa-solid fa-comments"></i> Communication</label>
+              <label><input type="checkbox" name="skills" value="Data Analysis"><i class="fa-solid fa-chart-line"></i> Data Analysis</label>
+              <label><input type="checkbox" name="skills" value="MS Office"><i class="fa-solid fa-file-word"></i> MS Office</label>
+              <label><input type="checkbox" name="skills" value="Digital Marketing"><i class="fa-solid fa-bullhorn"></i> Digital Marketing</label>
+              <label><input type="checkbox" name="skills" value="Creativity"><i class="fa-solid fa-paint-brush"></i> Creativity</label>
+              <label><input type="checkbox" name="skills" value="Problem Solving"><i class="fa-solid fa-lightbulb"></i> Problem Solving</label>
+              <label><input type="checkbox" name="skills" value="Teamwork"><i class="fa-solid fa-people-group"></i> Teamwork</label>
+              <label><input type="checkbox" name="skills" value="Leadership"><i class="fa-solid fa-flag"></i> Leadership</label>
+              <label><input type="checkbox" name="skills" value="Technical Writing"><i class="fa-solid fa-pen"></i> Technical Writing</label>
+            </div>
+            <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+
+          <!-- Q3 -->
+          <div class="form-step">
+            <p>Which sectors are you most interested in? (Select one or more)</p>
+            <div class="sector-grid" id="sectorGrid">
+              <button type="button" class="sector-btn" data-sector="IT"><i class="fa-solid fa-laptop-code"></i> IT</button>
+              <button type="button" class="sector-btn" data-sector="Healthcare"><i class="fa-solid fa-heart-pulse"></i> Healthcare</button>
+              <button type="button" class="sector-btn" data-sector="Education"><i class="fa-solid fa-book"></i> Education</button>
+              <button type="button" class="sector-btn" data-sector="Finance"><i class="fa-solid fa-landmark"></i> Finance</button>
+              <button type="button" class="sector-btn" data-sector="Agriculture"><i class="fa-solid fa-tractor"></i> Agriculture</button>
+              <button type="button" class="sector-btn" data-sector="Manufacturing"><i class="fa-solid fa-industry"></i> Manufacturing</button>
+              <button type="button" class="sector-btn" data-sector="Retail"><i class="fa-solid fa-cart-shopping"></i> Retail</button>
+              <button type="button" class="sector-btn" data-sector="Hospitality"><i class="fa-solid fa-hotel"></i> Hospitality</button>
+              <button type="button" class="sector-btn" data-sector="Media"><i class="fa-solid fa-film"></i> Media</button>
+              <button type="button" class="sector-btn" data-sector="Government"><i class="fa-solid fa-landmark"></i> Government</button>
+            </div>
+            <button type="button" class="next-btn">Next <i class="fas fa-arrow-right"></i></button>
+          </div>
+
+          <!-- Q4 -->
+          <div class="form-step">
+            <label for="location">Where do you prefer to work?</label>
+            <select id="location" name="location" required>
+              <option value="">Select..</option>
+              <option value="urban">Urban Area</option>
+              <option value="rural">Rural Area</option>
+              <option value="remote">Open to remote opportunities</option>
+              <option value="any">Any location</option>
+            </select>
+            <button type="submit" class="submit-btn">Get Career Suggestions <i class="fas fa-graduation-cap"></i></button>
+          </div>
+        </form>
+
+        <!-- Results Section -->
+        <div class="results-container" id="resultsContainer">
+          <h2>Your Career Suggestions</h2>
+          <div id="careerResults">
+            <!-- Results will be populated here by JavaScript -->
+          </div>
+          <button class="restart-btn" id="restartBtn">Start Again <i class="fas fa-redo"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2>Our Services</h2>
+      <div class="services-grid">
+        <div class="service-card" data-service="pathway-planning">
+          <div class="service-icon">
+            <i class="fas fa-file-alt"></i>
+            <span>Resume Analysis</span>
+          </div>
+          <div class="service-details">
+            <h3>Resume Analysis</h3>
+            <a href="resume-analyzer/index.html" target="_blank" class="service-link">Start →</a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="pathway-planning">
+          <div class="service-icon">
+            <i class="fas fa-road"></i>
+            <span>Pathway Planning</span>
+          </div>
+          <div class="service-details">
+            <h3>Pathway Planning</h3>
+            <a href="pathway-planning/index.html" target="_blank" class="service-link">Start →</a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="pathway-planning">
+          <div class="service-icon">
+            <i class="fas fa-briefcase"></i>
+            <span>Job Market Analysis</span>
+          </div>
+          <div class="service-details">
+            <h3>Job Market Analysis</h3>
+            <a href="job-market/index.html" target="_blank" class="service-link">Start →</a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="pathway-planning">
+          <div class="service-icon">
+            <i class="fas fa-file-alt"></i>
+            <span>Resume Builder</span>
+          </div>
+          <div class="service-details">
+            <h3>Resume Builder</h3>
+            <a href="resume-builder/index.html" target="_blank" class="service-link">Start →</a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="pathway-planning">
+          <div class="service-icon">
+            <i class="fas fa-handshake"></i>
+            <span>Interview Prepration</span>
+          </div>
+          <div class="service-details">
+            <h3>Interview Preparation</h3>
+            <a href="interview-prep/index.html" target="_blank" class="service-link">Start →</a>
+          </div>
+        </div>
+        
+        <div class="service-card" data-service="pathway-planning">
+          <div class="service-icon">
+            <i class="fas fa-user-graduate"></i>
+            <span>Skill Development</span>
+          </div>
+          <div class="service-details">
+            <h3>Skill Development</h3>
+            <a href="skill-development/index.html" target="_blank" class="service-link">Start →</a>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+ <!-- Blog Section -->
+<section id="blog" class="section">
+  <div class="container">
+    <h2>Career Blog</h2>
+    <div class="blog-grid">
+      <article class="blog-card">
+        <div class="blog-image">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="blog-content">
+          <h3>Top 5 Growing Careers in 2025</h3>
+          <p class="blog-date">September 22, 2025</p>
+          <p>Discover which career fields are experiencing the highest growth and offer the best opportunities...</p>
+          <a href="blog/top-careers-2025.html" class="blog-link">Read More</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-image">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <div class="blog-content">
+          <h3>How to Choose the Right College Major</h3>
+          <p class="blog-date">September 22, 2025</p>
+          <p>Making decisions about your education can be challenging. Here's our guide to selecting a major...</p>
+          <a href="blog/choose-college-major.html" class="blog-link">Read More</a>
+        </div>
+      </article>
+      <article class="blog-card">
+        <div class="blog-image">
+          <i class="fas fa-laptop-house"></i>
+        </div>
+        <div class="blog-content">
+          <h3>Remote Work: The Future of Employment?</h3>
+          <p class="blog-date">September 22, 2025</p>
+          <p>Explore how remote work is changing employment landscapes and what skills you need to thrive...</p>
+          <a href="blog/remote-work-future.html" class="blog-link">Read More</a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <div class="contact-content">
+        <div class="contact-info">
+          <h3>Get in Touch</h3>
+          <p>Have questions about your career path? Need personalized guidance? Reach out to our team of career counselors.</p>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <span>contactMargadarshini@gmail.com</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone"></i>
+            <span>+91 97486 39463</span>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-map-marker-alt"></i>
+            <span>Kolkata, West Bengal, India</span>
+          </div>
+        </div>
+        <form class="contact-form">
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <input type="text" placeholder="Subject">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>मार्गदर्शिनी</h3>
+          <p>Your trusted career guidance platform helping you navigate your professional journey with confidence.</p>
+        </div>
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 मार्गदर्शिनी. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
